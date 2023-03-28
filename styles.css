@@ -22,41 +22,121 @@
 }
 
 /* menu navigation bar */
-ul {
-    list-style-type: none;
+/* try using scss */
+
+.navbar {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
 }
 
-.menu {
+nav {
     display: flex;
-    float: right;
-    padding: 30px;
+    justify-content: space-between;
+    padding: 6.5vh 20vh 0 20vh
 }
 
-.menu ul li {
-    padding-left: 30px;
-}
-
-.menu ul li a {
-    font-family: "TiltWarp-Regular";
-    font-size: 20px;
-    color: #f2e9e4;
+nav .menu {
+    font-size: 12px;
+    color: #ffc8dd;
+    text-transform: uppercase;
+    font-family: gilroy, sans-serif;
     text-decoration: none;
+    position: relative;
 }
 
 /* navigation bar hover effect */
-.menu ul li::after {
+nav .menu::after {
     content: '';
     width: 0%;
-    height: 3px;
-    background: #f2e9e4;
+    height: 1.5px;
+    background: #ffc8dd;
     display: block;
     margin: auto;
     transition: 0.5s;
 }
 
-.menu ul li:hover::after{
+nav .menu:hover::after {
     width: 100%;
 }
+
+.nav_social {
+    position: relative;
+    display: inline-block;
+}
+
+.nav_social_dropdown {
+    position: absolute;
+    top: -15px;
+    left: -74%;
+    width: 10vw;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    visibility: hidden;
+    transition: .4s;
+    transition-timing-function: cubic-bezier(0,.89,.41,1);
+    opacity: 0;
+    transform: translateY(-10px);
+    transform-origin: top;
+}
+
+.nav_social_dropdown::after {
+    position: absolute;
+    right: 28px;
+    top: 15px;
+    z-index: 4;
+    width: 20px;
+}
+
+.nav_social_dropdown ul {
+    padding-top: 50px;
+    padding-bottom: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    list-style-type: none;
+}
+
+.nav_social_dropdown li {
+    padding: 10px 25px;
+    margin: 5px 5px;
+    position: relative;
+    cursor: pointer;
+    opacity: 0;
+    transform: translate(0, 20%);
+    transition: .8s;
+    transition-timing-function: cubic-bezier(0,.89,.41,1);
+    border-radius: 50px;
+}
+
+.nav_social_dropdown li a {
+    position: relative;
+    z-index: 1;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #353535;
+    font-size: 12px;
+    font-family: gilroy, sans-serif;
+    text-transform: uppercase;
+}
+
+
+.nav_social:hover .nav_social_dropdown {
+    pointer-events: all;
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.nav_social:hover .nav_social_dropdown li {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition-delay: calc(var(--order) * 100ms);
+}
+
+
+
 
 /* cover */
 .header {
@@ -69,29 +149,13 @@ ul {
 }
 
 @keyframes tracker_1{
-    0%{
-        transform: translateX(0); 
-    }
-    100%{ 
-        transform: translateX(calc(-200px * 10 - 100px)); 
-    }
+    0%{transform: translateX(0)}
+    100%{transform: translateX(calc(-240px * 9))}
 }
 
 @keyframes tracker_2{
-    0%{ 
-        transform: translateX(calc(-200px * 10 - 100px));
-    }
-    100%{
-        transform: translateX(0);
-    }
-}
-
-.navbar {
-    position: absolute;
-    z-index: 3;
-    width: 100%;
-    text-align: left;
-    margin-right: 70px;
+    0%{transform: translateX(calc(-240px * 9))}
+    100%{transform: translateX(0)}
 }
 
 .cover {
@@ -135,15 +199,15 @@ ul {
 }
 
 .slider .track1 {
-    animation: tracker_1 50s linear infinite;
+    animation: tracker_1 45s linear infinite;
     display: flex;
-    width: calc(250px * 18);
+    width: calc(240px * 14);
 }
 
 .slider .track2 {
-    animation: tracker_2 50s linear infinite;
+    animation: tracker_2 45s linear infinite;
     display: flex;
-    width: calc(250px * 18);
+    width: calc(240px * 14);
 }
 
 .slider .slide{
@@ -178,7 +242,7 @@ ul {
 
 .intro_texts {
     margin: 20px;
-    font-family: "Ubuntu-Light";
+    font-family: gilroy,sans-serif;;
     line-height: 1.5;
     font-size: 15px;
 }
