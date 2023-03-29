@@ -6,46 +6,36 @@
     src: url(./fonts/Harlow_Solid_Italic.woff) format("woff");
 }
 
-@font-face {
-    font-family: "TiltWarp-Regular";
-    src: url(./fonts/TiltWarp-Regular.ttf);
-}
-
-@font-face {
-    font-family: "Ubuntu-Light";
-    src: url(./fonts/Ubuntu-Light.ttf);
-}
-
 * {
     margin: 0;
     padding: 0;
 }
 
 /* menu navigation bar */
-/* try using scss */
+/* I would try to use scss for more architectural structure */
 
 .navbar {
     position: fixed;
-    z-index: 3;
     width: 100%;
+    z-index: 3;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 6.5vh 20vh 0 20vh
+    padding: 6.5vh 25vh 0 25vh
 }
 
 nav .menu {
-    font-size: 12px;
-    color: #ffc8dd;
-    text-transform: uppercase;
-    font-family: gilroy, sans-serif;
-    text-decoration: none;
     position: relative;
+    z-index: 2;
+    color: #ffc8dd;
+    font-size: 12px;
+    font-family: gilroy, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
-/* navigation bar hover effect */
 nav .menu::after {
     content: '';
     width: 0%;
@@ -69,8 +59,8 @@ nav .menu:hover::after {
     position: absolute;
     top: -15px;
     left: -74%;
-    width: 10vw;
-    background: rgba(255, 255, 255, 0.8);
+    width: 130px;
+    background: rgba(109, 104, 117, 0.8);
     border-radius: 25px;
     visibility: hidden;
     transition: .4s;
@@ -84,7 +74,7 @@ nav .menu:hover::after {
     position: absolute;
     right: 28px;
     top: 15px;
-    z-index: 4;
+    z-index: 1;
     width: 20px;
 }
 
@@ -115,7 +105,7 @@ nav .menu:hover::after {
     z-index: 1;
     border-radius: 50px;
     text-decoration: none;
-    color: #353535;
+    color: #fffcf7;
     font-size: 12px;
     font-family: gilroy, sans-serif;
     text-transform: uppercase;
