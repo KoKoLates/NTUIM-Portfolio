@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album of Portfolio</title>
+    <link rel="stylesheet" href="./styles/album.css">
+    <link rel="stylesheet" href="./styles/transitions.css">
+    <link rel="icon" href="./images/icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <div class="transition transition is-active"></div>
+    <div class="album-title">
+        <a href="index.html">
+            <img src="./images/down-arrow.png" alt="">
+            back
+        </a>
+        <span class="title">Album</span>
+    </div>
+    <div class="space"></div>
+    <div class="album-container">
+        <div class="album-image-01"><img src="./images/album01.JPG" width="400px"></div>
+        <div class="album-image-02">
+            <span>i want to add some introduction here <br>
+            or some explain about this page</span>
+            <div></div>
+            <img src="./images/album02.JPG" width="350px">
+        </div>
+    </div>
+    <div class="space"></div>
+
+    <script>
+        window.onload = () => {
+            const transition_el = document.querySelector('.transition');
+            setTimeout(() => {transition_el.classList.remove('is-active')}, 500)
+        }
+    </script>
+</body>
+</html>

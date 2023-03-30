@@ -3,17 +3,37 @@
 
 @font-face {
     font-family: "Harlow_Solid_Italic";
-    src: url(./fonts/Harlow_Solid_Italic.woff) format("woff");
+    src: url(../fonts/Harlow_Solid_Italic.woff);
 }
 
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
-/* menu navigation bar */
-/* I would try to use scss for more architectural structure */
+/*
+ * Setup the scrollbar type 
+ */ 
+body {
+    overflow: overlay;
+}
 
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-thumb {   
+	border-radius: 8px;
+	background-color: #06d6a0;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+}
+
+/*
+ * The navigation bar setup
+ * I would try to use scss to make it more architectural
+ */
 .navbar {
     position: fixed;
     width: 100%;
@@ -26,36 +46,36 @@ nav {
     padding: 6.5vh 25vh 0 25vh
 }
 
-nav .menu {
+nav .navbar-options {
     position: relative;
     z-index: 2;
-    color: #ffc8dd;
+    color: #f4acb7;
     font-size: 12px;
     font-family: gilroy, sans-serif;
     text-transform: uppercase;
     text-decoration: none;
 }
 
-nav .menu::after {
+nav .navbar-options::after {
     content: '';
     width: 0%;
     height: 1.5px;
-    background: #ffc8dd;
+    background: #f4acb7;
     display: block;
     margin: auto;
     transition: 0.5s;
 }
 
-nav .menu:hover::after {
+nav .navbar-options:hover::after {
     width: 100%;
 }
 
-.nav_social {
+.navbar-social {
     position: relative;
     display: inline-block;
 }
 
-.nav_social_dropdown {
+.navbar-social-dropdown {
     position: absolute;
     top: -15px;
     left: -74%;
@@ -70,7 +90,7 @@ nav .menu:hover::after {
     transform-origin: top;
 }
 
-.nav_social_dropdown::after {
+.navbar-social-dropdown::after {
     position: absolute;
     right: 28px;
     top: 15px;
@@ -78,7 +98,7 @@ nav .menu:hover::after {
     width: 20px;
 }
 
-.nav_social_dropdown ul {
+.navbar-social-dropdown ul {
     padding-top: 50px;
     padding-bottom: 8px;
     position: relative;
@@ -88,7 +108,7 @@ nav .menu:hover::after {
     list-style-type: none;
 }
 
-.nav_social_dropdown li {
+.navbar-social-dropdown li {
     padding: 10px 25px;
     margin: 5px 5px;
     position: relative;
@@ -100,7 +120,7 @@ nav .menu:hover::after {
     border-radius: 50px;
 }
 
-.nav_social_dropdown li a {
+.navbar-social-dropdown li a {
     position: relative;
     z-index: 1;
     border-radius: 50px;
@@ -111,24 +131,22 @@ nav .menu:hover::after {
     text-transform: uppercase;
 }
 
-
-.nav_social:hover .nav_social_dropdown {
+.navbar-social:hover .navbar-social-dropdown {
     pointer-events: all;
     visibility: visible;
     opacity: 1;
     transform: translate(0, 0);
 }
 
-.nav_social:hover .nav_social_dropdown li {
+.navbar-social:hover .navbar-social-dropdown li {
     opacity: 1;
     transform: translate(0, 0);
     transition-delay: calc(var(--order) * 100ms);
 }
 
-
-
-
-/* cover */
+/*
+ * Cover part of the website
+ */
 .header {
     min-height: 100vh;
     width: 100%;
@@ -157,6 +175,7 @@ nav .menu:hover::after {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: "Harlow_Solid_Italic";
 }
 
 .cover .top {
@@ -212,47 +231,101 @@ nav .menu:hover::after {
     border-radius: 10px;
 }
 
-/* introduction */
+/*
+* The Introduction part
+*/
+
 .intro {
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
     background-size: cover;
     background-color: #f2e9e4;
-
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
-.koko {
-    width: 240px;
-    border-radius: 120px;
-    margin: 20px;
+@keyframes blink {
+      0%{opacity: 1}
+     40%{opacity: 1}
+     60%{opacity: 0}
+    100%{opacity: 0}
 }
 
-.intro_texts {
+/* The typing effect sentences */
+.typing-container {
     margin: 20px;
-    font-family: gilroy,sans-serif;;
     line-height: 1.5;
+    color: #353535;
     font-size: 15px;
-}
+    font-family: gailroy, sans-serif;
 
-.footer {
-    width: 100%;
-    background-size: cover;
-    background-color: #f2e9e4;
     display: flex;
-    align-items: center;
+    text-align: center;
     justify-content: center;
+    width: 30%;
 }
 
-.link_icon {
-    padding-bottom: 10px;
+.sentence {
+    text-align: center;
 }
 
-.link_icon a {
-    width: 10px;
+.input-cursor {
+    width: 1.5px;
+    height: 19px;
+    display: inline-block;
+    background-color: #353535;
+    margin-left: 4px;
+    animation: blink .6s linear infinite alternate;
 }
 
+/* The about images */
+.about_images {
+    width: 100%;
+    flex-basis: 28%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
 
+.about_images div {
+    width: 75%;
+    overflow: hidden;
+    border-collapse: separate;
+    border-radius: 30px;
+}
 
+.about_images div img {
+    width: 105%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: saturate(0);
+    transition: .4s;
+}
+
+.about_images div:hover img {
+    filter: saturate(1);
+}
+
+.about_images div:nth-child(1) {
+    top: -15%;
+    left: 0;
+    position: absolute;
+    transform: rotate(-7deg);
+}
+
+.about_images div:nth-child(2) {
+    position: relative;
+    z-index: 2;
+    transform: translate(16.6%, 0);
+}
+
+.about_images div:nth-child(3) {
+    top: 15%;
+    right: 0;
+    position: absolute;
+    transform: rotate(10deg);
+    z-index: 2;
+}

@@ -1,0 +1,104 @@
+
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Harlow_Solid_Italic";
+    src: url(../fonts/Harlow_Solid_Italic.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+}
+
+/*
+ * Setup the scrollbar type 
+ */ 
+ body {
+    overflow: overlay;
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-thumb {   
+	border-radius: 8px;
+	background-color: #06d6a0;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+}
+
+.album-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    overflow-x: hidden;
+    padding-top: 25vh;
+    margin: 0 5vw 0 5vw;
+}
+
+.album-title a {
+    color: #414141;
+    font-size: 12px;
+    font-family: gilory, sans-serif;
+    line-height: 121%;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+}
+
+.album-title a img {
+    filter: invert(0);
+    width: 50px;
+    margin-right: 20px;
+}
+
+.album-title span {
+    font-family: "Harlow_Solid_Italic";
+    font-weight: bolder;
+    font-size: 120px;
+    padding-right: 40px ;
+}
+
+.album-container {
+    margin: 0 5vw 0 5vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.space {
+    margin-top: 20vh;
+    margin-bottom: 30vh;
+}
+
+.album-container .album-image-01 {
+    margin-left: 85px;
+}
+
+.album-container .album-image-01 img {
+    border-radius: 15px;
+    filter: brightness(0.9)
+}
+
+.album-container .album-image-02 {
+    margin-right: 85px;
+    filter: saturate(0.9);
+}
+
+.album-container .album-image-02 span {
+    font-family: gilory, sans-serif;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.album-container .album-image-02 img {
+    border-radius: 15px;
+}
+
+.album-container .album-image-02 div {
+    margin-top: 25vh;
+}

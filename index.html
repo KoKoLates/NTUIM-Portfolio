@@ -6,24 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- linking to the style sheet and the icon image -->
-    <link rel="icon" href="./images/" type="image/x-icon" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="./images/icon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/transitions.css" />
+    
     <title>Portfolio</title>
 </head>
 <body>
+    <div class="transition transition is-active"></div>
     <!-- the cove and navigation bar of the portfolio -->
     <section class="header" id="header">
         <div class="navbar">
             <nav>
-                <a class="menu" href="#header">portfolio</a>
-                <a class="menu" href="#intro">about</a>
-                <a class="menu" href="#header">albums</a>
-                <div class="nav_social">
-                    <a class="menu" href="#header">socials</a>
-                    <div class="nav_social_dropdown">
+                <a class="navbar-options" href="#header">portfolio</a>
+                <a class="navbar-options" href="#intro">about</a>
+                <a class="navbar-options" href="./album.html">albums</a>
+                <div class="navbar-social">
+                    <a class="navbar-options" href="#header">socials</a>
+                    <div class="navbar-social-dropdown">
                         <ul>
-                            <li style="--order:1"><a href="">Facebook</a></li>
-                            <li style="--order:2"><a href="">instagram</a></li>
+                            <li style="--order:1"><a href="https://www.facebook.com/profile.php?id=100004459629550" target="_blank">Facebook</a></li>
+                            <li style="--order:2"><a href="https://www.instagram.com/koko__0915/" target="_blank">instagram</a></li>
                             <li style="--order:3"><a href="https://github.com/KoKoLates" target="_blank">github</a></li>
                         </ul>
                     </div>
@@ -76,16 +79,17 @@
 
     <!-- the introduction part of the portfolio -->
     <section class="intro" id="intro">
-        <div class="intro_image">
-            <img class="koko" src="./images/koko.png" alt="KoKo cover photos">
+        <div class="typing-container">
+            <span id="sentence" class="sentence"></span>
+            <span class="input-cursor"></span>
+            
         </div>
-        <div class="intro_texts">
-            <p>
-                Hi, I'm Ko Ko. <br>
-                I'm a biomechetranoics engineering students <br>
-                I love photo graphing and designing, and here are some of them.
-            </p>
+        <div class="about_images">
+            <div><img src="./images/koko03.JPG" alt=""></div>
+            <div><img src="./images/koko02.JPG" alt=""></div>
+            <div><img src="./images/koko01.JPG" alt=""></div>
         </div>
     </section>
+    <script src="./scripts.js"></script>
 </body>
 </html>
