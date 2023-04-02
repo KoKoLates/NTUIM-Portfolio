@@ -1,3 +1,6 @@
+
+@charset "UTF-8";
+
 .transition {
     position: fixed;
     top: -100%;
@@ -5,7 +8,7 @@
     right: 0;
     height: 100%;
     z-index: 100;
-    background-color: #ffcdb2;
+    background-color: #fcd5ce;
     transition: .5s ease-out;
 }
 

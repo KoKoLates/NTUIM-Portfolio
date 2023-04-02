@@ -1,8 +1,8 @@
 
 const texts = [
-    'this is the text 1', 
-    'text 2 is be down here', 
-    '3 text finished'
+    'HI, i am KOKO :)', 
+    'here is my portfolio', 
+    'enjoy my photographs'
 ]
 
 async function typeWriting(sentence, ref, delay=100) {
@@ -44,3 +44,7 @@ window.onload = () => {
         transition_el.classList.remove('is-active');
     }, 500)
 }
+
+window.addEventListener('scroll', function() {
+})
+

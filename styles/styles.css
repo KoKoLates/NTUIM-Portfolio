@@ -2,7 +2,7 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: "Harlow_Solid_Italic";
+    font-family: "Harlow-Solid-Italic";
     src: url(../fonts/Harlow_Solid_Italic.woff);
 }
 
@@ -13,7 +13,9 @@
 }
 
 /*
- * Setup the scrollbar type 
+ * Setup the scrollbar type.
+ * Setting up the shape and type for the scrollbar
+ * suppose webkit could be using in the chrome environments
  */ 
 body {
     overflow: overlay;
@@ -30,9 +32,11 @@ body {
     background-clip: padding-box;
 }
 
+
 /*
- * The navigation bar setup
- * I would try to use scss to make it more architectural
+ * The navigation bar include the menu options
+ * and the drop down list with hover and transition effect.
+ * I would try to use scss to make it more architectual later.
  */
 .navbar {
     position: fixed;
@@ -49,8 +53,8 @@ nav {
 nav .navbar-options {
     position: relative;
     z-index: 2;
-    color: #f4acb7;
-    font-size: 12px;
+    color: #ffb3c1;
+    font-size: 2vh;
     font-family: gilroy, sans-serif;
     text-transform: uppercase;
     text-decoration: none;
@@ -60,7 +64,7 @@ nav .navbar-options::after {
     content: '';
     width: 0%;
     height: 1.5px;
-    background: #f4acb7;
+    background: #ffb3c1;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -78,7 +82,7 @@ nav .navbar-options:hover::after {
 .navbar-social-dropdown {
     position: absolute;
     top: -15px;
-    left: -74%;
+    left: -7vh;
     width: 130px;
     background: rgba(109, 104, 117, 0.8);
     border-radius: 25px;
@@ -145,7 +149,8 @@ nav .navbar-options:hover::after {
 }
 
 /*
- * Cover part of the website
+ * The cover part of the portfolio website.
+ * Include the title and slider effects.
  */
 .header {
     min-height: 100vh;
@@ -154,16 +159,6 @@ nav .navbar-options:hover::after {
     background-color: #353535;
     display: flex;
     justify-content: center;
-}
-
-@keyframes tracker_1{
-    0%{transform: translateX(0)}
-    100%{transform: translateX(calc(-240px * 9))}
-}
-
-@keyframes tracker_2{
-    0%{transform: translateX(calc(-240px * 9))}
-    100%{transform: translateX(0)}
 }
 
 .cover {
@@ -175,14 +170,13 @@ nav .navbar-options:hover::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Harlow_Solid_Italic";
 }
 
 .cover .top {
     position: absolute;
     z-index: 2;
-    font-family: "Harlow_Solid_Italic";
-    font-size: 120px;
+    font-family: "Harlow-Solid-Italic";
+    font-size: 25vh;
     color: #353535;
     transform: rotate(-5deg);
 }
@@ -190,8 +184,8 @@ nav .navbar-options:hover::after {
 .cover .down {
     position: absolute;
     z-index: 1;
-    font-family: "Harlow_Solid_Italic";
-    font-size: 125px;
+    font-family: "Harlow-Solid-Italic";
+    font-size: 27vh;
     color: #f2e9e4;
     -webkit-text-stroke: 12px #f2e9e4;
     transform: rotate(-5deg);
@@ -204,38 +198,48 @@ nav .navbar-options:hover::after {
     width: 90%;
     display: grid;
     overflow: hidden;
-    margin-top: 70px;
+    margin-top: 10vh;
+}
+
+@keyframes ccw-tracker{
+    0%{transform: translateX(0)}
+    100%{transform: translateX(calc(-42vh * 9))}
 }
 
 .slider .track1 {
-    animation: tracker_1 45s linear infinite;
+    animation: ccw-tracker 35s linear infinite;
     display: flex;
-    width: calc(240px * 14);
+    width: calc(42vh * 14);
+}
+
+@keyframes cw-tracker{
+    0%{transform: translateX(calc(-42vh * 9))}
+    100%{transform: translateX(0)}
 }
 
 .slider .track2 {
-    animation: tracker_2 45s linear infinite;
+    animation: cw-tracker 35s linear infinite;
     display: flex;
-    width: calc(240px * 14);
+    width: calc(42vh * 14);
 }
 
-.slider .slide{
+.slider .slide {
     display: flex;
     align-items: center;
-    padding: 20px;
-    /* perspective: 100px; */
-    border-radius: 20px;
+    padding: 3vh;
 }
 
-.slide img{
-    border-radius: 10px;
+.slide img {
+    width: 36vh;
+    border-radius: 2vh;
 }
 
 /*
-* The Introduction part
-*/
+ * The About part of the portfolio webpage
+ * Contain the introduction images and typing writer effects.
+ */
 
-.intro {
+.about {
     height: 100vh;
     width: 100%;
     background-size: cover;
@@ -254,16 +258,17 @@ nav .navbar-options:hover::after {
 
 /* The typing effect sentences */
 .typing-container {
+    color: #353535;
+    font-size: 4vh;
+    font-weight: bolder;
+    font-family: gailroy, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    width: 30%;
     margin: 20px;
     line-height: 1.5;
-    color: #353535;
-    font-size: 15px;
-    font-family: gailroy, sans-serif;
-
     display: flex;
-    text-align: center;
-    justify-content: center;
-    width: 30%;
+    justify-content: center;   
 }
 
 .sentence {
@@ -272,15 +277,16 @@ nav .navbar-options:hover::after {
 
 .input-cursor {
     width: 1.5px;
-    height: 19px;
+    height: 5vh;
     display: inline-block;
-    background-color: #353535;
+    background-color: #333333;
     margin-left: 4px;
+    padding-top: 1vh;
     animation: blink .6s linear infinite alternate;
 }
 
 /* The about images */
-.about_images {
+.about-images {
     width: 100%;
     flex-basis: 28%;
     position: relative;
@@ -289,14 +295,14 @@ nav .navbar-options:hover::after {
     margin-right: 50px;
 }
 
-.about_images div {
+.about-images div {
     width: 75%;
     overflow: hidden;
     border-collapse: separate;
     border-radius: 30px;
 }
 
-.about_images div img {
+.about-images div img {
     width: 105%;
     display: flex;
     justify-content: center;
@@ -305,24 +311,24 @@ nav .navbar-options:hover::after {
     transition: .4s;
 }
 
-.about_images div:hover img {
+.about-images div:hover img {
     filter: saturate(1);
 }
 
-.about_images div:nth-child(1) {
+.about-images div:nth-child(1) {
     top: -15%;
     left: 0;
     position: absolute;
     transform: rotate(-7deg);
 }
 
-.about_images div:nth-child(2) {
+.about-images div:nth-child(2) {
     position: relative;
     z-index: 2;
     transform: translate(16.6%, 0);
 }
 
-.about_images div:nth-child(3) {
+.about-images div:nth-child(3) {
     top: 15%;
     right: 0;
     position: absolute;
