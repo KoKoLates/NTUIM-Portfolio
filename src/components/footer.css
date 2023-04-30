@@ -19,13 +19,26 @@
     justify-content: space-evenly;
 }
 
-.footer-interact-text span{
+.footer-interact-text span {
     color: aliceblue;
     font-size: 30px;
-    font-weight:500;
+    font-weight: 500;
     text-transform: uppercase;
     display: flex;
     text-align: center;
+}
+
+.test {
+    display: flex;
+}
+
+/* Interact button */
+
+.button {
+    pointer-events: auto;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
 }
 
 .footer-interact-button {
@@ -33,28 +46,65 @@
     text-decoration: none;
     border: 1px solid #fff;
     border-radius: 25px;
-    width: 100%;
+    width: 80%;
     height: 50px;
     font-weight: 500;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
-	transition: transform 0.9s easing;
 }
 
-.footer-interact-container:hover .footer-interact-button::before {
+.footer-interact-button .footer-button {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    transition: transform 0.9s cubic-bezier(0, 0.89, 0.41, 1);
+}
+
+.footer-interact-button .footer-button::before,
+.footer-interact-button .footer-button::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+}
+
+.footer-interact-button .footer-button::before {
+    width: 110%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    padding-bottom: 95%;
+    border-radius: 200px;
     transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 1);
     opacity: 1;
 }
 
-.footer-interact-container:hover .footer-interact-button::after {
-    opacity: 1;
-    transition-duration: 0.6s;
-    transition-delay: 0.15s;
+.footer-interact-button:hover .footer-button::before {
+    transition: all 0.6s cubic-bezier(0, 0.89, 0.41, 1);
+    transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
 }
 
-.footer-interact-container .footer-interact-button::after {
+.footer-interact-button .footer-button::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     opacity: 0;
     transition: opacity .6s;
+}
+
+.footer-interact-button:hover .footer-button::after {
+    opacity: 1;
+    transition-duration: 0.6s;
+    transition-delay: .15s;
+}
+
+.footer-interact-button>span {
+    display: block;
+}
+
+.footer-interact-button:hover>span {
+    mix-blend-mode: difference;
 }
