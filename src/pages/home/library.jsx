@@ -1,28 +1,46 @@
 
 import './library.css';
-import images from "../../images/image";
+import { useState } from 'react';
+import ImagesConfig from './config';
+import arrow from '../../images/arrow.png';
+
 
 function Library() {
-    const i = images[0];
-    const m = images[1]
-    return (
-        <div className="library-container">
-            <ImageContainer image={i} year='2020' text='test images' />
-            <ImageContainer image={m} year='2020' text='test images' />
-        </div>
-    )
-}
+    // setup the original background
+    const background = {
+        background: '#f7f7f2',
+        transition: '0.6s cubic-bezier(0, 0, 0.58, 1)'
+    }
 
-const ImageContainer = (props) => {
-    const {image, year, text} = props;
+    const [color, setColor] = useState(background);
+    const ImageContainer = ({ pose, image, color, text }) => {
+        return (
+            <div className='image-container' style={{ ...pose }}>
+                <img src={image} alt="card"
+                    onMouseEnter={() => setColor(color)} onMouseLeave={() => setColor(background)} />
+                <div className='image-info-container'
+                    onMouseEnter={() => setColor(color)} onMouseLeave={() => setColor(background)}>
+                    <p>{text.year}</p><p>{text.description}</p>
+                    <p className='image-info-title'>{text.title}</p>
+                </div>
+            </div>
+        )
+    }
 
     return (
-        <div className='image-container'>
-            <img src={image} alt="" className='is-inview' />
-            <div className='image-info-container'>
-                <p>{year}</p>
-                <p>{text}</p>
-                <p className='image-info-title'>Testing</p>
+        <div className='library-container' style={color}>
+            {
+                ImagesConfig.map((config, index) => {
+                    return <ImageContainer {...config} key={index} />
+                })
+            }
+            <div className='arrow-container'>
+                <div className='arrow-text'>
+                    <span>Back</span>
+                </div>
+                <div className='arrow-image'>
+                    <a href="#cover"><img src={arrow} alt="arrow" /></a>
+                </div>
             </div>
         </div>
     )

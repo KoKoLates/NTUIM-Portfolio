@@ -5,8 +5,9 @@ function Cover() {
     return (
         <section className='cover' id='cover'>
             <div className='cover-container'>
-                <p className='cover-title-top'>Portfolio</p>
-                <p className='cover-title-down'>Portfolio</p>
+                <div className='cover-title'>
+                   <span>portfolio</span>
+                </div>
             </div>
         </section>
     )

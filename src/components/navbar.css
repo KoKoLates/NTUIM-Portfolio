@@ -9,7 +9,7 @@
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 6.5vh 25vh 0 25vh;
+    padding: 6.5vh 20vw 0 20vw;
 }
 
 nav .navbar-options {
@@ -36,6 +36,10 @@ nav .navbar-options:hover::after {
     width: 100%;
 }
 
+.navbar-social-container:hover {
+    cursor: pointer;
+}
+
 .navbar-social-container {
     position: relative;
     display: inline-block;
@@ -49,7 +53,7 @@ nav .navbar-options:hover::after {
 
 .navbar-social-dropdown {
     position: absolute;
-    top: -70%;
+    top: -100%;
     left: -50%;
     width: 200%;
     background-color: rgba(109, 104, 117, 0.75);

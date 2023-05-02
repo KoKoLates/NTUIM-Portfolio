@@ -15,31 +15,29 @@
 }
 
 .cover-container {
-    min-height: 100vh;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
     display: flex;
-    align-items: center;
     justify-content: center;
-    z-index: 2;
+    align-items: center;
 }
 
-.cover-container .cover-title-top {
-    position: absolute;
-    z-index: 2;
-    max-width: 100vw;
+
+.cover-container .cover-title {
+    /* width: 80%;
+    height: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover-title span {
+    font-size: 15vw;
     font-family: 'Harlow-Solid-Italic';
-    font-size: 25vh;
     color: #353535;
+    font-weight: bold;
     transform: rotate(-5deg);
 }
 
-.cover-container .cover-title-down {
-    position: absolute;
-    z-index: 1;
-    font-family: 'Harlow-Solid-Italic';
-    font-size: 27vh;
-    color: #f2e9e4;
-    transform: rotate(-5deg);
-    font-weight: bolder;
-}
