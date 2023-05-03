@@ -1,44 +1,48 @@
 import './introduction.css';
-import cover01 from '../../images/koko03.jpg';
-import cover02 from '../../images/koko02.jpg';
-import cover03 from '../../images/koko01.jpg';
-import boundary from '../../images/boundary.png';
 
-function Introduction() {
+const Introduction = () => {
+    const RotateCard = ({ image }) => {
+        return (
+            <div className='image-card'>
+                <img src={image} alt="introduction card" />
+            </div>
+        )
+    };
+
+    const Boundary = () => {
+        return (
+            <div>
+                <img src={require('../../images/boundary.png')}
+                    alt="section-boundary" style={{ width: '100vw' }} />
+            </div>
+        )
+    };
+
+    const images = [
+        require('../../images/koko03.jpg'),
+        require('../../images/koko02.jpg'),
+        require('../../images/koko01.jpg')
+    ];
     return (
         <div className="about" id="about">
             <div className='introduction-container'>
                 <div className='introduction-text-container'>
-                    <p>here is the context and will be
-                        modified later. and i will give some
-                        introduction here.</p>
+                    <p>Hi, i'm KoKo. I am dedicated to capturing life's moments in 
+                        their most authentic and beautiful form. Here is my Portfolio. 
+                        Enjoy the beauty here.
+                    </p>
                 </div>
                 <div className='introduction-image-container'>
-                    <RotateCard image={cover01} />
-                    <RotateCard image={cover02} />
-                    <RotateCard image={cover03} />
+                    {
+                        images.map((image, index) => {
+                            return <RotateCard key={index} image={image} />
+                        })
+                    }
                 </div>
             </div>
             <Boundary />
         </div>
-    )
-}
-
-const RotateCard = ({ image }) => {
-    return (
-        <div className='image-card'>
-            <img src={image} alt="introduction card" />
-        </div>
-    )
-}
-
-const Boundary = () => {
-    return (
-        <div>
-            <img src={boundary} alt="section-boundary"
-                style={{ width: '100vw' }} />
-        </div>
-    )
+    );
 }
 
 export default Introduction;

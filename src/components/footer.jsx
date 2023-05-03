@@ -2,28 +2,36 @@
 import './footer.css';
 
 function Footer() {
+    const info = [
+        {
+            tag: 'contact',
+            refe: 'mailto: the21515@gmail.com'
+        }, 
+        {
+            tag: 'source',
+            refe: 'https://github.com/KoKoLates/NTUIM-portfolio/tree/react-develop'
+        }
+    ]
+
+    const ContactButton = ({ tag, refe }) => {
+        return (
+            <a className='footer-interact-button button' href={refe} target='_blank' rel="noreferrer">
+                <div className='footer-button'></div>
+                <span>{tag}</span>
+            </a>
+        )
+    }
 
     return (
         <footer className='footer'>
-            <div className='footer-container'>
-                <div className='footer-text-container'>
-                    <span>
-                        about any big things <br />
-                        here to contact
-                    </span>
-                </div>
-                <div className='button-block'>
-                    <a className='footer-interact-button button' href='https://github.com/KoKoLates' target='_blank' rel="noreferrer">
-                        <div className='footer-button'></div>
-                        <span>contract</span>
-                    </a>
-                    <a className='footer-interact-button button' href='https://github.com/KoKoLates' target='_blank' rel="noreferrer">
-                        <div className='footer-button'></div>
-                        <span>contract</span>
-                    </a>
-                </div>
+            <div className='footer-container'>s
+                {
+                    info.map((i, index) => {
+                        return <ContactButton {...i} key={index} />
+                    })
+                }
             </div>
-        </footer>
+        </footer >
     )
 }
 

@@ -2,7 +2,6 @@
 import './library.css';
 import { useState } from 'react';
 import ImagesConfig from './config';
-import arrow from '../../images/arrow.png';
 
 
 function Library() {
@@ -27,6 +26,19 @@ function Library() {
         )
     }
 
+    const ArrowBack = () => {
+        return (
+            <div className='arrow-container'>
+                <div className='arrow-text'>
+                    <span>Back</span>
+                </div>
+                <div className='arrow-image'>
+                    <a href="#cover"><img src={require('../../images/arrow.png')} alt="arrow" /></a>
+                </div>
+            </div>
+        )
+    }
+
     return (
         <div className='library-container' style={color}>
             {
@@ -34,14 +46,7 @@ function Library() {
                     return <ImageContainer {...config} key={index} />
                 })
             }
-            <div className='arrow-container'>
-                <div className='arrow-text'>
-                    <span>Back</span>
-                </div>
-                <div className='arrow-image'>
-                    <a href="#cover"><img src={arrow} alt="arrow" /></a>
-                </div>
-            </div>
+            <ArrowBack />
         </div>
     )
 }

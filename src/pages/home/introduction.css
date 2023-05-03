@@ -16,7 +16,7 @@
 }
 
 .introduction-text-container {
-	width: 40%;
+	width: 35%;
 }
 
 .introduction-text-container p {
@@ -24,6 +24,7 @@
 	font-size: 1.5vw;
 	color: #313131;
 	font-family: gilroy, sans-serif;
+	text-transform: uppercase;
 }
 
 .introduction-image-container {
@@ -39,7 +40,7 @@
 	width: 85%;
 	overflow: hidden;
 	border-collapse: separate;
-	border-radius: 25px
+	border-radius: 30px
 }
 
 .introduction-image-container div img {

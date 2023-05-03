@@ -6,7 +6,7 @@ function Cover() {
         <section className='cover' id='cover'>
             <div className='cover-container'>
                 <div className='cover-title'>
-                   <span>portfolio</span>
+                   <span>Portfolio</span>
                 </div>
             </div>
         </section>

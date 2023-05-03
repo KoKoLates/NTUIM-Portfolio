@@ -13,7 +13,7 @@ function Navbar() {
                     <a href='#cover' className='navbar-options'>socials</a>
                     <div className='navbar-social-dropdown'>
                         <ul>
-                            <li style={{ order: 1 }}><a href="https://www.facebook.com/profile.php?id=100004459629550s" target='_blank' rel='noreferrer'>Facebook</a></li>
+                            <li style={{ order: 1 }}><a href="https://www.facebook.com/profile.php?id=100004459629550" target='_blank' rel='noreferrer'>Facebook</a></li>
                             <li style={{ order: 2 }}><a href="https://www.instagram.com/koko__0915" target='_blank' rel='noreferrer'>Instagram</a></li>
                             <li style={{ order: 3 }}><a href="https://github.com/KoKoLates" target='_blank' rel='noreferrer'>Github</a></li>
                         </ul>
