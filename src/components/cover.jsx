@@ -7,7 +7,7 @@ const Cover = () => {
     <section className='cover' id='cover'>
       <div className='cover-container'>
         <div className='cover-title'>
-          <span>Port-folio</span>
+          <span>Portfolio</span>
         </div>
       </div>
     </section>

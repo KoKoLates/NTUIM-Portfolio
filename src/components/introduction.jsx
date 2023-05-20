@@ -28,13 +28,13 @@ const Introduction = () => {
       <div className='introduction-container'>
         <div className='introduction-text-container'>
           <p>
-            i'm Ko Ko. and i am <br />
+            I'm Ko Ko. and i am <br />
             dedicated to capture <br />
             the life's moments in <br />
-            the most authentic and <br />
-            beauty form. Here is <br />
-            my portfolio. Enjoy <br />
-            yourself beauty here.
+            the most authentic <br />
+            and beauty form. Here <br />
+            is my portfolio. enjoy<br />
+            yourself here.
           </p>
         </div>
         <div className='introduction-image-container'>

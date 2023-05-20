@@ -1,13 +1,8 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "Harlow-Solid-Italic";
-  src: url(../static/fonts/Harlow-Solid-Italic.woff);
-}
-
-@font-face {
-  font-family: 'CheetahKick';
-  src: url(../static/fonts/CheetahKick.otf) format('opentype');
+  font-family: 'CraftsmanPersonalUseItalic';
+  src: url(../static/fonts/CraftsmanPersonalUseItalic.ttf);
 }
 
 .cover {
@@ -29,7 +24,6 @@
   align-items: center;
 }
 
-
 .cover-container .cover-title {
   display: flex;
   justify-content: center;
@@ -39,8 +33,7 @@
 
 .cover-title span {
   font-size: 17vw;
-  font-family: 'CheetahKick';
+  font-family: 'CraftsmanPersonalUseItalic';
   color: #353535;
-  font-weight: bold;
-  transform: rotate(-5deg);
+  transform: rotate(-7deg);
 }

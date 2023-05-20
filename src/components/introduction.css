@@ -17,14 +17,17 @@
 
 .introduction-text-container {
   width: 35%;
+  text-align: center;
 }
 
 .introduction-text-container p {
-  padding: 0 12% 0 12%;
-  font-size: 1.5vw;
+  padding-left: 24%;
+  font-size: 1.2vw;
   color: #313131;
   font-family: monospace;
   text-transform: uppercase;
+  font-weight: bold;
+  color: cadetblue;
 }
 
 .introduction-image-container {
