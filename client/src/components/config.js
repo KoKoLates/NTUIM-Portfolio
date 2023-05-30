@@ -117,7 +117,7 @@ const ImagesConfig = [
         text: {
             year: '2021',
             description: 'advertisements',
-            title: 'Nag Nag'
+            title: 'Nag Magazine'
         }
     }
 ]

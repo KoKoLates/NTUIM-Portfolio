@@ -9,7 +9,7 @@ const Navbar = () => {
         <a href='#about' className='navbar-options'>about</a>
         <a href='https://www.behance.net/76b894a4' target='_blank' rel='noreferrer' className='navbar-options'>albums</a>
         <div className='navbar-social-container'>
-          <a href='#cover' className='navbar-options'>socials</a>
+          <a href='#footer' className='navbar-options'>socials</a>
           <div className='navbar-social-dropdown'>
             <ul>
               <li style={{ order: 1 }}><a href="https://www.facebook.com/profile.php?id=100004459629550" target='_blank' rel='noreferrer'>Facebook</a></li>

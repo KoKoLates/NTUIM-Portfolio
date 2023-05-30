@@ -3,7 +3,6 @@ import './library.css';
 import { useState, useEffect } from 'react';
 import ImagesConfig from './config';
 
-
 function Library() {
     // setup the original background
     const background = {
