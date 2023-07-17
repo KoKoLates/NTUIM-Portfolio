@@ -80,3 +80,8 @@
   position: absolute;
   z-index: 2;
 }
+
+/* introduction boundary */
+.introduction-image-boundary img {
+  width: 100%;
+}

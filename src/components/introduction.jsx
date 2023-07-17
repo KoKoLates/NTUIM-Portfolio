@@ -28,13 +28,11 @@ const Introduction = () => {
       <div className='introduction-container'>
         <div className='introduction-text-container'>
           <p>
-            I'm Ko Ko. and i am <br />
-            dedicated to capture <br />
-            the life's moments in <br />
-            the most authentic <br />
-            and beauty form. Here <br />
-            is my portfolio. enjoy<br />
-            yourself here.
+            Here, is Ko Ko. I love to capture my life's <br />
+            momenet with more aesthetics form. Include <br />
+            photograph, literature and graphic designs <br />
+            Here is kind of my personal portfolio with that. <br />
+            Hope you enjoy here! <br />
           </p>
         </div>
         <div className='introduction-image-container'>
@@ -49,9 +47,9 @@ const Introduction = () => {
             scale={0.02} initiate={-5} />
         </div>
       </div>
-      <div>
+      <div className='introduction-image-boundary'>
         <img src={require('../static/images/boundary.png')}
-          alt="section-boundary" style={{ width: '100vw' }} />
+          alt="section-boundary" />
       </div>
     </div>
   );
