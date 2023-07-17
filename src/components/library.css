@@ -73,29 +73,3 @@
   opacity: 1;
   transform: none;
 }
-
-/* arrow flag */
-.arrow-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: -240vh;
-  left: 30vw;
-}
-
-.arrow-text {
-  font-family: Harlow-Solid-Italic;
-  font-size: 25px;
-  margin-right: 20px;
-  color: #323232;
-}
-
-.arrow-image {
-  display: flex;
-  align-items: center;
-}
-
-.arrow-image img {
-  width: 20%;
-}
