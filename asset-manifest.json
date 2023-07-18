@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/ntuim-portfolio/static/css/main.a901a664.css",
-    "main.js": "/ntuim-portfolio/static/js/main.2b46726f.js",
-    "static/media/05.jpg": "/ntuim-portfolio/static/media/05.23b956b9df033f7e585d.jpg",
-    "static/media/koko01.jpg": "/ntuim-portfolio/static/media/koko01.62043d3eb7bc507b8a74.jpg",
-    "static/media/03.jpg": "/ntuim-portfolio/static/media/03.ae3462a106ffc19af301.jpg",
-    "static/media/CraftsmanPersonalUseItalic.ttf": "/ntuim-portfolio/static/media/CraftsmanPersonalUseItalic.cf0743cb27551679a26c.ttf",
-    "static/media/06.jpg": "/ntuim-portfolio/static/media/06.140815a162352bc00a75.jpg",
-    "static/media/08.jpg": "/ntuim-portfolio/static/media/08.221fdb56e79273fadea2.jpg",
-    "static/media/14.jpg": "/ntuim-portfolio/static/media/14.678fad4370d3cd03aa2f.jpg",
-    "static/media/footer.png": "/ntuim-portfolio/static/media/footer.ee4e1ea648e88685a967.png",
-    "static/media/boundary.png": "/ntuim-portfolio/static/media/boundary.dd4416b4984a9b22a11c.png",
-    "static/media/koko03.jpg": "/ntuim-portfolio/static/media/koko03.6188d2aa429fa730a765.jpg",
-    "static/media/11.png": "/ntuim-portfolio/static/media/11.f761cc69ad780497866f.png",
-    "static/media/koko02.jpg": "/ntuim-portfolio/static/media/koko02.e1b951128f3c782f9761.jpg",
-    "index.html": "/ntuim-portfolio/index.html",
-    "main.a901a664.css.map": "/ntuim-portfolio/static/css/main.a901a664.css.map",
-    "main.2b46726f.js.map": "/ntuim-portfolio/static/js/main.2b46726f.js.map"
+    "main.css": "/NTUIM-Portfolio/static/css/main.137102fd.css",
+    "main.js": "/NTUIM-Portfolio/static/js/main.06673a96.js",
+    "static/media/05.jpg": "/NTUIM-Portfolio/static/media/05.23b956b9df033f7e585d.jpg",
+    "static/media/koko01.jpg": "/NTUIM-Portfolio/static/media/koko01.62043d3eb7bc507b8a74.jpg",
+    "static/media/03.jpg": "/NTUIM-Portfolio/static/media/03.ae3462a106ffc19af301.jpg",
+    "static/media/CraftsmanPersonalUseItalic.ttf": "/NTUIM-Portfolio/static/media/CraftsmanPersonalUseItalic.cf0743cb27551679a26c.ttf",
+    "static/media/06.jpg": "/NTUIM-Portfolio/static/media/06.140815a162352bc00a75.jpg",
+    "static/media/08.jpg": "/NTUIM-Portfolio/static/media/08.221fdb56e79273fadea2.jpg",
+    "static/media/14.jpg": "/NTUIM-Portfolio/static/media/14.678fad4370d3cd03aa2f.jpg",
+    "static/media/footer.png": "/NTUIM-Portfolio/static/media/footer.ee4e1ea648e88685a967.png",
+    "static/media/boundary.png": "/NTUIM-Portfolio/static/media/boundary.dd4416b4984a9b22a11c.png",
+    "static/media/koko03.jpg": "/NTUIM-Portfolio/static/media/koko03.6188d2aa429fa730a765.jpg",
+    "static/media/11.png": "/NTUIM-Portfolio/static/media/11.f761cc69ad780497866f.png",
+    "static/media/koko02.jpg": "/NTUIM-Portfolio/static/media/koko02.e1b951128f3c782f9761.jpg",
+    "index.html": "/NTUIM-Portfolio/index.html",
+    "main.137102fd.css.map": "/NTUIM-Portfolio/static/css/main.137102fd.css.map",
+    "main.06673a96.js.map": "/NTUIM-Portfolio/static/js/main.06673a96.js.map"
   },
   "entrypoints": [
-    "static/css/main.a901a664.css",
-    "static/js/main.2b46726f.js"
+    "static/css/main.137102fd.css",
+    "static/js/main.06673a96.js"
   ]
 }
