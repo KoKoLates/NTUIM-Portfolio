@@ -1,0 +1,11 @@
+{
+    "short_name": "Portfolio Website", 
+    "name": "Personal Photography Portfolio Website", 
+    "icons": [
+        {
+            "src": "icon.ico", 
+            "type": "image/x-icon"
+        }
+    ], 
+    "start_url": "./index.html"
+}
